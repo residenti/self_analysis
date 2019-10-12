@@ -1,13 +1,27 @@
 <template>
-  <option class="answer-candidate">
-    {{ text }}
-  </option>
+  <li class="answer-candidate">
+    <label>
+      <input
+        type="radio"
+        name="answer"
+        v-bind:value="idx"
+        v-on:change="onSelected"
+      >{{ text }}
+    </label>
+  </li>
 </template>
 
 <script>
 export default {
   name: 'AnswerCandidate',
-  props: ['text']
+
+  props: ['idx', 'text'],
+
+  methods: {
+    onSelected: function() {
+      this.$emit('selected', this.idx)
+    }
+  }
 }
 </script>
 

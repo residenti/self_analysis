@@ -11,11 +11,16 @@ export class Question {
   }
 
   get answerCandidates() {
-    return this._datum.answerCandidates.map((val, idx) => ({ text: val.text, idx }))
+    return this._datum.answerCandidates
+      .map((val, idx) => ({ text: val.text, idx }))
+  }
+
+  isCorrect(answerIdx) {
+    return this._datum.answerIndex === int(answerIdx)
   }
 
   static find(id) {
-    const datum = data.find(d => d.id === parseInt(id, 10))
+    const datum = data.find(d => d.id === int(id))
 
     if (!datum) {
       throw new NotFoundError()
@@ -30,10 +35,15 @@ export class Question {
 }
 
 export default {
+  // TODO このfindメソッドはmemoizeしておきたい…
   find: (id) => Question.find(id),
 
   next: (id) => {
-    const nextId = parseInt(id, 10) + 1
+    const nextId = int(id) + 1
     return nextId <= Question.maxId() ? nextId : void 0
   }
+}
+
+export function int(num) {
+  return parseInt(num, 10)
 }

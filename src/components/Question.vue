@@ -4,14 +4,16 @@
     <div class="text">
       {{ question.text }}
     </div>
-    <select class="answer-candidates">
-      <option
+    <ul class="answer-candidates">
+      <li
         is="AnswerCandidate"
         v-for="candidate in question.answerCandidates"
         v-bind:key="candidate.idx"
+        v-bind:idx="candidate.idx"
         v-bind:text="candidate.text"
+        v-on:selected="selectAnswerCandidate"
       />
-    </select>
+    </ul>
     <div class="button-group">
       <router-link
         v-bind:to="nextPath"
@@ -25,6 +27,7 @@
 
 <script>
 import questions from '../master/questions'
+import store from '../store'
 import AnswerCandidate from './AnswerCandidate'
 
 export default {
@@ -44,6 +47,12 @@ export default {
     nextPath: function() {
       const nextId = questions.next(this.id)
       return nextId ? `/question/${nextId}` : '/summary'
+    }
+  },
+
+  methods: {
+    selectAnswerCandidate: function(answerIdx) {
+      store.saveAnswer(this.id, answerIdx)
     }
   }
 }
