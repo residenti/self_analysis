@@ -1,7 +1,24 @@
 # self_analysis
 
-## 開発
+## Project setup
+```
+npm install
+```
 
-### 必要なもの
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-- Node.js: [nodenv](https://github.com/nodenv/nodenv)がお勧めです
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
