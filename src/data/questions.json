@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "text": "1 + 1は何？",
+        "answerCandidates": [
+          { "text": "2" },
+          { "text": "3" },
+          { "text": "4" }
+        ],
+        "answerIndex": 0
+    },
+    {
+        "id": 2,
+        "text": "2 + 2は何？",
+        "answerCandidates": [
+          { "text": "5" },
+          { "text": "4" },
+          { "text": "6" }
+        ],
+        "answerIndex": 1
+    },
+    {
+        "id": 3,
+        "text": "飽きてきた？",
+        "answerCandidates": [
+          { "text": "はい" }
+        ],
+        "answerIndex": 0
+    }
+]
