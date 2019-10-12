@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <h1>Hello App!</h1>
-    <p>
-      <router-link to="/foo">Go to Foo</router-link>
-      <router-link to="/bar">Go to Bar</router-link>
-    </p>
+    <!-- メインのvue component -->
+    <!--
+        今回はvueの単一ファイルコンポーネントの機能を利用しているので
+        一つのファイル内にtmlとjsとcssを記載する
+    -->
    <router-view></router-view>
   </div>
 </template>
