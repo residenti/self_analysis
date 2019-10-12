@@ -16,12 +16,22 @@ export default {
 </script>
 
 <style>
+/* TODO: 本当はreset.cssとか真面目にやるべき */
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 16px/1.6 Helvetica Neue,Helvetica,Arial,sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px 60px 0;
+  color: #333631;
+}
+.button-group {
+  margin: 20px;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 10%;
+  font-size: 1.5em;
+  background-color: #de82a7;
+  padding: 5px 20px 5px;
 }
 </style>
