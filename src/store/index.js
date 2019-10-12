@@ -10,11 +10,19 @@ export default {
     answerSheet
   },
 
+  userId: function() {
+    return this.state.me.userId
+  },
+
   saveUserId: function(userId) {
     this.state.me.userId = userId
   },
 
   saveAnswer: function(questionId, answerIdx) {
     this.state.answerSheet.saveAnswer(questionId, answerIdx)
+  },
+
+  correctAnswers: function() {
+    return this.state.answerSheet.correctAnswers()
   }
 }

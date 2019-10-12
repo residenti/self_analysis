@@ -35,13 +35,15 @@ export class Question {
 }
 
 export default {
-  // TODO このfindメソッドはmemoizeしておきたい…
+  // TODO: このfindメソッドはmemoizeしておきたい…
   find: (id) => Question.find(id),
 
   next: (id) => {
     const nextId = int(id) + 1
     return nextId <= Question.maxId() ? nextId : void 0
-  }
+  },
+
+  numOfTotalQuestions: () => Question.maxId()
 }
 
 export function int(num) {

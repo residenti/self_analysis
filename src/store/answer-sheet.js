@@ -21,4 +21,9 @@ export default class AnswerSheet {
   saveAnswer(questionId, answerIdx) {
     this._history[questionId] = new Answer(questionId, answerIdx)
   }
+
+  correctAnswers() {
+    const ids = Object.keys(this._history)
+    return ids.filter(id => this._history[id].isCorrect)
+  }
 }
