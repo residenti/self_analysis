@@ -1,34 +1,27 @@
 # self_analysis
 
-## Project setup
+READMEは適当にしか書いていないです、気が向いたら追記するかもしれない。
+
+## 開発
+
+### 準備
+
+Node.jsをインストールしておいてください。v10.16.0で動作確認してます。 [nodenv](https://github.com/nodenv/nodenv) が入っていると楽かもしれない。
+
+必要なパッケージのインストール:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 開発用サーバの起動
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+デフォルトでは http://localhost:8080 でアクセスできるはずです。
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 解説
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## TODO
-
-* vue-routerの導入
-  - 始めは固定ページで
-  - アンケートを意識して、固定インスタンスでパラメータ渡しでコンポーネントを作りたい
-* 簡単なクイズアプリの作成
-  - OOPを意識したい
-* READMEの充実
-* 不要なファイル(favicon等)の削除
+色々解説しておきたいけど力尽きたので後日でお願いします。
