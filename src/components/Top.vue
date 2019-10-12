@@ -1,6 +1,6 @@
 <template>
   <div class="top">
-    <h1 class="title">FLUITS BASKET クイズ</h1>
+    <h1 class="title">適当なクイズ</h1>
     <label class="user-id">No. 記入欄:
       <input type="text" v-model="userId" />
     </label>
