@@ -1,6 +1,9 @@
 <template>
   <div class="top">
     <h1>フルーツバスケットクイズ</h1>
+    <label>No. 記入欄
+      <input type="text" />
+    </label>
     <div class="button-group">
       <router-link
         to="/question/1"

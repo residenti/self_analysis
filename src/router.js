@@ -8,7 +8,7 @@ import Question from './components/Question'
 // 各pathに対応するvueのcomponentのマッピングを指定しておく
 const routes = [
   { path: '/', component: Top },
-    { path: '/question/:id', component: Question, props: true }
+  { path: '/question/:id', component: Question, props: true }
 ]
 
 export default new VueRouter({
