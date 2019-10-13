@@ -1,7 +1,10 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 const parse = require('csv-parse/lib/sync')
 const path = require('path')
 
+// TODO: CSV_PATHはコマンドライン引数で受け取るようにしてほしいんだが
 const CSV_PATH = path.join(__dirname, '..', 'data', 'questions.csv')
 
 function main() {

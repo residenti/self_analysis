@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "generate": "node bin/convert.js > src/data/questions.json"
+    "generate": "bin/convert.js > src/data/questions.json"
   },
   "dependencies": {
     "core-js": "^2.6.5",
