@@ -1,8 +1,9 @@
 import User from './user'
 import AnswerSheet from './answer-sheet'
+import questions from '../master/questions'
 
 const me = new User()
-const answerSheet = new AnswerSheet(me)
+const answerSheet = new AnswerSheet(me, questions)
 
 export default {
   state: {
