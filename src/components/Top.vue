@@ -29,7 +29,7 @@ export default {
   methods: {
     startAnswer: function() {
       store.saveUserId(this.userId)
-      store.saveStartTime(Date.now)
+      store.saveStartTime(Date.now())
     }
   }
 }

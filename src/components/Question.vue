@@ -29,6 +29,7 @@
 import questions from '../master/questions'
 import store from '../store'
 import AnswerCandidate from './AnswerCandidate'
+
 export default {
   name: 'Question',
   props: ['id'],

@@ -29,6 +29,10 @@ export default {
 
   saveAnswer: function(questionId, answerIdx) {
     this.state.answerSheet.saveAnswer(questionId, answerIdx)
+  },
+
+  correctAnswers: function() {
+    return this.state.answerSheet.correctAnswers()
   }
 
 }

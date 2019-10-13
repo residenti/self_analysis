@@ -33,4 +33,10 @@ export default class AnswerSheet {
     this._history[questionId] = new Answer(question, answerIdx)
   }
 
+  correctAnswers() {
+    const ids = Object.keys(this._history)
+    return ids.filter(id => this._history[id].isCorrect)
+      .map(id => this._history[id])
+  }
+
 }
