@@ -34,6 +34,7 @@ export class Question {
   }
 }
 
+// TODO: questions.jsonを注入するようにしてテスト書きたい
 export default {
   // TODO: このfindメソッドはmemoizeしておきたい…
   find: (id) => Question.find(id),
