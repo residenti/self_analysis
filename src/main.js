@@ -3,15 +3,19 @@ import VueRouter from 'vue-router'
 
 import router from './router'
 import App from './App.vue'
+import {NotFoundError} from './master'
 
 Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
 Vue.config.errorHandler = function (err, vm, info) {
-  console.log(err)
-  // FIXME: ちょっとこのエラーハンドリングはザル過ぎない？？
-  router.push('/question/NotFound').catch(err => {})
+  if (err instanceof NotFoundError) {
+    // FIXME: NotFoundって別にquestionに限らないのでは？？
+    router.push('/question/NotFound').catch(err => {})
+  } else {
+    console.error(err)
+  }
 }
 
 new Vue({
