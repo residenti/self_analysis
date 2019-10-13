@@ -11,6 +11,7 @@ export class Question {
   }
 
   get answerCandidates() {
+    // FIXME: Candidateクラス作れ、プレインなオブジェクト返すな
     return this._datum.answerCandidates
       .map((val, idx) => ({ text: val.text, idx }))
   }
