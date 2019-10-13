@@ -6,7 +6,7 @@
       <router-link
         to="/question/1"
         class="button"
-        v-on:click.native="saveUserId"
+        v-on:click.native="startAnswer"
       >
       始める
       </router-link>
@@ -27,8 +27,9 @@ export default {
   },
 
   methods: {
-    saveUserId: function() {
+    startAnswer: function() {
       store.saveUserId(this.userId)
+      store.saveStartTime(Date.now)
     }
   }
 }
