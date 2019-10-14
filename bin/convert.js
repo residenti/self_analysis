@@ -4,8 +4,7 @@ const fs = require('fs')
 const parse = require('csv-parse/lib/sync')
 const path = require('path')
 
-// TODO: CSV_PATHはコマンドライン引数で受け取るようにしてほしいんだが
-const CSV_PATH = path.join(__dirname, '..', 'data', 'questions.csv')
+const CSV_PATH = path.join(__dirname, '..', 'data', 'options.csv')
 
 function main() {
   const content = parse(fs.readFileSync(CSV_PATH, { encoding: 'utf-8' }), {
@@ -17,15 +16,10 @@ function main() {
 
 function convert(content) {
   return content
-    .map(datum => {
+    .map(option => {
       return {
-        id: parseInt(datum.id, 10),
-        text: datum.text,
-        answerCandidates: [1, 2, 3].reduce((acc, idx) => {
-          const candidate = datum[`candidate${idx}`]
-          return candidate ? acc.concat({ text: candidate }) : acc
-        }, []),
-        answerIndex: parseInt(datum.answerIdx, 10)
+        id: parseInt(option.id, 10),
+        text: option.text
       }
     })
 }

@@ -4,11 +4,11 @@
     <input type="text" v-model="userId" />
     <div class="button-group">
       <router-link
-        to="/question/1"
+        to="/answerSheet"
         class="button"
         v-on:click.native="startAnswer"
       >
-      始める
+      回答する
       </router-link>
     </div>
   </div>
